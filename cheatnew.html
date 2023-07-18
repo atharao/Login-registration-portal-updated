@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moving Paragraph</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+}
+
+    .rectangular-box {
+      width: 110px;
+      height: 10%;
+      background-color: #000;
+      display:grid;
+      justify-content:center;
+      align-items: flex-end;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .moving-paragraph {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      bottom: -16px;
+      transform: translateY(100%);
+      animation: moveParagraph 65s linear;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes moveParagraph {
+      0% {
+        transform: translateY(95%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100%);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="rectangular-box">
+    <div class="moving-paragraph">
+      <p>GOOD EVENING
+        1. First of all, I would like to thank PlanetSpark for considering me for this opportunity.
+        
+        3. Allow me to introduce myself. My name is Rao Athar Khan, and I am currently in my fourth year of pursuing a B.Tech in Information Technology from the College of Engineering Roorkee.
+        
+        5. I would also like to express my gratitude to Eshita Singh ma'am, the recruiter who has been guiding me throughout this process.
+        
+        7. Now, coming to the first question, my preferred job role at PlanetSpark is Sales. I have always been fascinated by the art of building relationships, connecting with people, and driving business growth. 
+        
+        9. I have developed a strong passion for sales, so the Sales role aligns perfectly with my skills, experiences, and career aspirations.
+        
+        11. I am confident that my dedication, enthusiasm will enable me to make a positive impact on the company's success.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
