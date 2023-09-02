@@ -1,4 +1,4 @@
-# Login-registration-portal
+# Authentication Portal 
 
 A Flask application which allows users to register and log in via a web form.
 
