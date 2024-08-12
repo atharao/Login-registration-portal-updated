@@ -1,8 +1,8 @@
-# Login-registration-portal
+# Authentication Portal 
 
-A flask application which allows user to register and login via a web form.
+A Flask application which allows users to register and log in via a web form.
 
-Hosted on [replit](https://replit.com/@atharao/SilkySpanishSigns#templates/index.html)
+Hosted on [replit](https://registration-and-login-web-page.atharao.repl.co)
 
 ### Simple login and registration form using 
 * FLASK(python framework)
@@ -24,18 +24,5 @@ python app.py
 ```bash
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
-* After clicking on the above link you will be able to see the welcome page
-
-![image](https://github.com/atharao/login-registration-portal/blob/main/images/welcome_page.png)
-
-* If you are a new user then register yourself by clicking on register tab then you will see the registeration page
-
-![image](https://github.com/atharao/login-registration-portal/blob/main/images/resgister_page.png)
-
-* If you are a existing user then click on the login tab then you will see the login page
-
-![image](https://github.com/atharao/login-registration-portal/blob/main/images/login_page.png)
-
-
 
 
