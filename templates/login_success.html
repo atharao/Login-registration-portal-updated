@@ -2,36 +2,9 @@
 <html>
 <head>
   <title>Login Successful</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      margin-top: 200px;
-      background-image: url('https://wallpaperaccess.com/full/1792320.jpg');
-      background-size: cover;
-    }
-
-    h1 {
-      color: #fff;
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: #fff;
-      font-size: 18px;
-    }
-
-    .container {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #4cafa7;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    }
-  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='login_success.css') }}">
 </head>
 <body>
   <div class="container">

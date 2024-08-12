@@ -1,59 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>WELCOME TO RAO ATHAR'S WEBSITE</title>
+    <title>Authentication-Portal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            background-image: url('https://wallpapercave.com/wp/wp6929041.jpg');
-            background-size: cover;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        .admin-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        a {
-            display: inline-block;
-            padding: 15px 30px; 
-            background-color: #4cafa7;
-            color: white;
-            text-decoration: none;
-            margin: 10px;
-            font-size: 20px;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        a:hover {
-            background-color: #66c6bf;
-            transform: scale(1.1);
-        }
-
-        .admin-button a {
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-    </style>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon">
 </head>
 <body>
     <h1>WELCOME TO RAO ATHAR'S WEBSITE</h1>
-    <div class="admin-button">
-        <a href="{{ url_for('users') }}">Admin</a>
-    </div>
+    <a class="admin-button" href="{{ url_for('users') }}"><strong>Admin</strong></a>
     <div class="buttons">
-        <a class="button" href="{{ url_for('register') }}">Register</a>
-        <a class="button" href="{{ url_for('login') }}">Login</a>
+        <a class="button" href="{{ url_for('register') }}"  style="margin-left: 10px;">Register</a>
+        <a class="button" href="{{ url_for('login') }}"     style="margin-left: 40px;">Login</a>
     </div>
 </body>
 </html>
+
+

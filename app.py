@@ -29,33 +29,6 @@ def insert_user(username, password):
     conn.commit()
     conn.close()
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    if request.method == 'POST':
-        # Get the username and password from the form data
-        username = request.form.get('username')
-        password = request.form.get('password')
-
-        # Perform any necessary validation or checks
-
-        # Check if the username already exists in the database
-        db = get_db()
-        cursor = db.cursor()
-        cursor.execute("SELECT * FROM users WHERE username=?", (username,))
-        existing_user = cursor.fetchone()
-
-        if existing_user:
-            error = 'Username already exists. Please choose a different username.'
-            return render_template('register.html', error=error)
-
-        # Insert the new user into the database
-        insert_user(username, password)
-
-        return render_template('register_success.html')
-
-    else:
-        return render_template('register.html')
-
 # Database connection
 def get_db():
     db = getattr(g, '_database', None)
@@ -87,6 +60,35 @@ def close_db(exception):
 @app.route('/')
 def index():
     return render_template("index.html")
+
+
+#Registeration
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        # Get the username and password from the form data
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        # Perform any necessary validation or checks
+
+        # Check if the username already exists in the database
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM users WHERE username=?", (username,))
+        existing_user = cursor.fetchone()
+
+        if existing_user:
+            error = 'Username already exists. Please choose a different username.'
+            return render_template('register.html', error=error)
+
+        # Insert the new user into the database
+        insert_user(username, password)
+
+        return render_template('register_success.html')
+
+    else:
+        return render_template('register.html')    
 
 # Login page
 @app.route('/login', methods=['GET', 'POST'])
